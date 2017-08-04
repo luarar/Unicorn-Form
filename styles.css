@@ -195,3 +195,15 @@ label {
 }
 
 .material-icons{font-size: 18px;}
+
+[type="checkbox"]+label {
+
+}
+
+
+.avatar-img {
+padding:5px;
+  max-width:150px;
+  height: auto;
+  border-radius: 50%;
+}
