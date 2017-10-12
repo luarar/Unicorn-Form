@@ -1,128 +1,113 @@
-<!doctype html>
+<html>
+	<head>
+			<meta charset="UTF-8">
+			<title>Build-A-Unicorn!</title>
+			
+			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<link rel="stylesheet" href="css/style.css">
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A page to build your Unicorn">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Build your unicorn</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-    <link rel="stylesheet" href="styles.css" />
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript">
-    
-    $(document).ready(function() {
-    $('select').material_select();
-    });
-    
-    </script>
-  </head>
-  <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
-        <header class="mdl-layout__header">
-          <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">Build-A-Unicorn!</span>
-          </div>
-          
-        </header>
-        <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">Build-A-Unicorn!</span>
-          <div class="avatar">
-            <img src="img/unicorn.jpg" alt="charlie" class="avatar-img">
-          </div>
-          <!-- /.avatar -->
-          <div class="drawer-text">This is a page to create your unicorn. I hope you like it.
-          </div>
-          <!-- /.drawer-text -->
-        </div>
-        <!-- /.mdl-layout__drawer -->
-        <!--  -->
-        <main class="mdl-layout__content">
-          <div class="mdl-grid portfolio-max-width portfolio-contact">
-            <div class="mdl-card__title mdl-cell mdl-cell--12-col mdl-cell--3-offset-desktop" id="tarjeta">
-              <h1 class="mdl-card__title-text">It's time to build your unicorn. Let's go!</h1>
-            </div>
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card mdl-shadow--4dp">
-              
-              
-              <div class="mdl-card__supporting-text">
-                <form action="#" class="">
-                   <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Unicorn's Name</label>
-        </div>
-                  <div class="mdl-inputfield mdl-js-inputfield">
-                    <select>
-                      <option value="" disabled selected>Unicorn's gender</option>
-                      <option value="1">Male</option>
-                      <option value="2">Female</option>
-                      <option value="3">Doesn't believe in gender</option>
-                    </select>
-                    <label>Unicorn's gender</label>
-                  </div>
-                  <div class="mdl-inputfield mdl-js-inputfield">
-                    <select>
-                      <option value="" disabled selected>Fur Color</option>
-                      <option value="1">Blue</option>
-                      <option value="2">Pink</option>
-                      <option value="3">Orange</option>
-                      <option value="4">Lime</option>
-                      <option value="5">Black</option>
-                    </select>
-                    <label>Fur Color</label>
-                  </div>
-             <!--    <div class="">
-                    <label for="horn">Horn Length</label>
-                    <input type="range" min="5" max="25" value="15" name="horn" id="horn" class="validate" required>
-                    <label for="horn">5cm</label>
-                    <label for="horn" class="right-align">25cm</label>
+      		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+			<div class="container-fluid gradient">
+				<div class="row custom">
+					<div class="col 12">
+			  			<a href="#" id="nav"><img src="images/navbar.png" alt="navegacion"></a>
+			    		<h2>Build-A-Unicorn</h2>
+			    	</div>
+			    </div>
+			    <div id="menu-dropdown">
+			    		<ul>
+			    			<li>Get my unicorn!</li>
+			    			<li>About unicorns</li>
+		    			<li>About us</li>	
+		    		</ul>
+		    </div>
+		    <div class="row">
+		    	<div class="col s12 titulo">
+		    		<h1>It's time to build your Unicorn! Let's go!</h1>
+		    	</div>
+		    </div>
+		    <div class="row">
+		    	<div class="col s12 unicornio">
+			    	<div class="form">
+			    		<div class="row modified">
+				    		<div class="input-field">
+						          <input type="text" id="unicornName">
+						          <label for="first_name" class="label" >Unicorn's Name</label>
+						          <div class="errors"><p>Name your unicorn!</p></div>
+	        				</div>
+	        			</div>
+	        			<div class="row modified" id="fade">
+      						<div class="input-field selectorOne">
+							    <label for="select" id="genderSelect" class="selection">Unicorn's Gender</label>
+							    <select id="gender">
+							      <option value="" disabled selected>Unicorn's Gender</option>
+							      <option value="1">Female</option>
+							      <option value="2">Male</option>
+							      <option value="3">Doesn't believe in gender</option>
+							    </select>	
+							    <div class="show"><p>Choose one</p></div>
+  							</div>
+  						</div>
+  						<div class="row modified">
+      						<div class="input-field selectorTwo">
+      					        <label for="select" id="furSelect" class="selection">Fur color</label>
+							    <select id="color">
+							      <option value="" disabled selected>Fur color</option>
+							      <option value="1">Blue</option>
+							      <option value="2">Pink</option>
+							      <option value="3">Purple</option>
+							      <option value="4">Orange</option>
+							      <option value="5">Lime</option>
+							      <option value="6">Black</option>
+							      <option value="7">White</option>
+							    </select>	
+							    <div class="error3"><p>Choose one</p></div>
+  							</div>
+  						</div>
+						<div class="row horn">
+							<div class="myClass">
+								<label for="input">Horn length</label>
+								<div class="line"></div>  
+      							<input type="range" id="test5" min="5" max="25" />
+						      	<div class="scale">	
+							    	<label for="min">5 cm</label>
+							    	<label for="max">25 cm</label>
+							    </div>
+						    </div>
+ 						</div>
+	        			<div class="row modified2">
+					        <div class="input-field">
+					          <input type="email" class="validate" id="mail">
+					          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
+					          <p id="emptyMail">Write an email address</p>
+					          <div class="icon"><i class="material-icons">warning</i></div>
+					        </div>
+      					</div>
+      					<div class="row modified">
+      						<div class="check">
+	      						<p>
+									<input type="checkbox" class="filled-in" id="checkbox" name="checkbox" value="on">
+									<label for="checkbox" class="align">I accept terms and conditions</label>
+	    						</p>
+    						</div>
+    					</div>
+    					<div class="row checked">
+								    <p id="checkbox-error">Hey! Click here!</p>
+						</div>
 
-           </div>  -->
-                   <div class="input-field">
-          <input id="email" type="email" class="validate">
-          <label for="email" data-error="Not a valid e-mail adress" data-success="right">Email adress</label>
-          <p class="right-align iconito">
-          <label for="email" data-error="Not a valid e-mail adress" data-success="right"><i class="material-icons">warning</i></label>
+    					<div class="row modified">
+    						<a type="submit" class="waves-effect waves-light btn myBtn" onclick="formValidation()">Get my unicorn</a>
+    					</div> 		
+			    	</div> 
+			    </div> 
+		    </div>  
+  		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+      	<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="js/functions.js"></script>	
 
-          </p>
-
-                </div>
-   
-
-
-
-                  
-                  <p>
-                    <input type="checkbox" class="filled-in" id="filled-in-box"  />
-                    <label for="filled-in-box">I accept terms and conditions</label>
-                  </p>
-                  <p class="boton">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent boton" type="submit">
-                    Get my unicorn
-                    </button>
-                  </p>
-                </form>
-              </div>
-            </div>
-          </div>
-          
-        </main>
-      </div>
-      <script src="js/jquery.min.js"></script>
-      <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-      
-    </body>
-  </html>
+		</body>
+</html>
