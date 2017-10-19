@@ -7,9 +7,13 @@
 /* General Appearence */
 
 body {
-	background: url(../images/fondo3.jpg);
-	background-size: cover; 
-	background-repeat: no-repeat;
+
+ background: rgb(224,168,190); 
+ background: -moz-linear-gradient(45deg, rgba(224,168,190,1) 0%, rgba(226,226,226,1) 50%, rgba(226,226,226,1) 50%, rgba(58,162,175,1) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(45deg, rgba(224,168,190,1) 0%,rgba(226,226,226,1) 50%,rgba(226,226,226,1) 50%,rgba(58,162,175,1) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(45deg, rgba(224,168,190,1) 0%,rgba(226,226,226,1) 50%,rgba(226,226,226,1) 50%,rgba(58,162,175,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0a8be', endColorstr='#3aa2af',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ 
 }
 
 .titulo {
